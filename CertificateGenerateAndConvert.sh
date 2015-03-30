@@ -19,3 +19,14 @@ openssl x509 -req -days 365 -in client.csr -CA ca.crt -CAkey ca.key -set_serial 
 #convert client cert into pkcs and pem format
 openssl pkcs12 -export -clcerts -in client.crt -inkey client.key -out client.p12
 openssl pkcs12 -in client.p12 -out client.pem -clcerts
+
+#PUBLIC  KEY CRYPTOGRAPHY AND KEY AGREEMENT
+# dsa, dh, rsa
+#CERTIFICATES
+# x509, x509v3
+#HASH FUNCTIONS AND AUTHENTICATION CODES
+# hmac, md2, md4, md5, mdc2, ripemd, sha
+#SYMMETRIX CIPHERS
+# rc2, rc4, rc5, des, blowfish, cast, idea
+# DATA ENCODING AND INPUT/OUPT
+# pem, pkcs7, pkcs12, asn1, bio, evp
