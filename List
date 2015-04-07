@@ -1,0 +1,10 @@
+#PUBLIC  KEY CRYPTOGRAPHY AND KEY AGREEMENT
+# dsa, dh, rsa
+#CERTIFICATES
+# x509, x509v3
+#HASH FUNCTIONS AND AUTHENTICATION CODES
+# hmac, md2, md4, md5, mdc2, ripemd, sha
+#SYMMETRIX CIPHERS
+# rc2, rc4, rc5, aes, des, blowfish, cast, idea
+# DATA ENCODING AND INPUT/OUPT
+# pem, pkcs7, pkcs12, asn1, bio, evp
