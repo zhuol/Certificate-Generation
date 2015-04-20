@@ -1,241 +1,129 @@
-#<VirtualHost *:80>	:
-#	ServerAdmin zhuol@localhost
-#	DocumentRoot /var/www
-#	ServerName zhubuntu14.spidynamics.com
-#	#SSLEngine off
-#	#SSLVerifyClient off
-#</VirtualHost>
+<html>
+<head>
+	<style>
+		table {
+			border-collapse: collapse;
+		}
 
-#Listening ports Added
-listen 12345
-listen 12346
-listen 12347
-listen 12348
-listen 12349
-listen 12350
-listen 12351
-listen 12352
-listen 12353
-listen 12354
-listen 12355
-listen 12356
-listen 12357
-listen 12358
-listen 12359
-listen 12360
+		table, td, th {
+			border: 3px solid black;
+			width: 39%;
+			height: 27%;
+			text-align:center;
+		}
 
-<VirtualHost *:443>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient require
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
+		.title{
+			font-size: 28px;
+		}
+	</style>
+</head>
 
-<VirtualHost *:12345>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/DES_RSA_X509V1_SHA256
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
+<body>
+	<p class="title">Test Page of Client Certificate Authentication</p>
+	<table>
+		<tr><th>Test Page</th>
+			<th>CIPHER</th>
+			<th>CRYPTOGRAPHY</th>
+			<th>CERTIFICATE</th>
+			<th>ENCODING</th>
+			<th>HASH ALGORITHM</th></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/DES_RSA_X509V1_SHA256">Link</a></td>
+			<td><p>DES</p></td>
+			<td><p>RSA</p></td>
+			<td><p>X509-v1</p></td>
+		    <td><a href="./certs/ClientGenerator/des_rsa_x509v1_sha256_client.p12">PKCS</a></td>
+		    <td><p>SHA256</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/DES_RSA_X509V1_MD5">Link</a></td>
+			<td><p>DES</p></td>
+			<td><p>RSA</p></td>
+			<td><p>X509-v1</p></td>
+			<td><a href="./certs/ClientGenerator/des_rsa_x509v1_md5_client.p12">PKCS</a></td>
+			<td><p>MD5</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/DES_DSA_X509V1_SHA256">Link</a></td>
+			<td><p>DES</p></td>
+			<td><p>DSA</p></td>
+			<td><p>X509-v1</p></td>
+			<td><a href="./certs/ClientGenerator/des_dsa_x509v1_sha256_client.p12">PKCS</a></td>
+			<td><p>SHA256</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/DES_DSA_X509V1_MD5">Link</a></td>
+			<td><p>DES</p></td>
+			<td><p>DSA</p></td>
+			<td><p>X509-v1</p></td>
+			<td><a href="./certs/ClientGenerator/des_dsa_x509v1_md5_client.p12">PKCS</a></td>
+			<td><p>MD5</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/AES_RSA_X509V1_SHA256">Link</a></td>
+			<td><p>AES</p></td>
+			<td><p>RSA</p></td>
+			<td><p>X509-v1</p></td>
+			<td><a href="./certs/ClientGenerator/aes_rsa_x509v1_sha256_client.p12">PKCS</a></td>
+			<td><p>SHA256</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/AES_RSA_X509V1_MD5">Link</a></td>
+			<td><p>AES</p></td>
+			<td><p>RSA</p></td>
+			<td><p>X509-v1</p></td>
+			<td><a href="./certs/ClientGenerator/aes_rsa_x509v1_md5_client.p12">PKCS</a></td>
+			<td><p>MD5</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/AES_DSA_X509V1_SHA256">Link</a></td>
+			<td><p>AES</p></td>
+			<td><p>DSA</p></td>
+			<td><p>X509-v1</p></td>
+			<td><a href="./certs/ClientGenerator/aes_dsa_x509v1_sha256_client.p12">PKCS</a></td>
+	        <td><p>SHA256</p></td></tr>	
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/AES_DSA_X509V1_MD5">Link</a></td>
+			<td><p>AES</p></td>
+			<td><p>DSA</p></td>
+			<td><p>X509-v1</p></td>
+			<td><a href="./certs/ClientGenerator/aes_dsa_x509v1_md5_client.p12">PKCS</a></td>
+			<td><p>MD5</p></td></tr>	
 
-<VirtualHost *:12346>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/DES_RSA_X509V1_MD5
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12347>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/DES_DSA_X509V1_SHA256
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12348>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/DES_DSA_X509V1_MD5
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12349>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/AES_RSA_X509V1_SHA256
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12350>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/AES_RSA_X509V1_MD5
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12351>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/AES_DSA_X509V1_SHA256
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12352>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/AES_DSA_X509V1_MD5
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12353>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/DES_RSA_X509V3_SHA256
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12354>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/DES_RSA_X509V3_MD5
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12355>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/DES_DSA_X509V3_SHA256
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12356>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/DES_DSA_X509V3_MD5
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12357>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/AES_RSA_X509V3_SHA256
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12358>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/AES_RSA_X509V3_MD5
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12359>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/AES_DSA_X509V3_SHA256
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:12360>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/AES_DSA_X509V3_MD5
-	ServerName zhubuntu14.spidynamics.com
-	SSLEngine On
-	SSLVerifyClient optional
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
-
-<VirtualHost *:443>	
-	ServerAdmin zhuol@localhost
-	DocumentRoot /var/www/html3
-	ServerName 172.16.10.125
-	SSLEngine On	
-	SSLVerifyClient require
-	SSLVerifyDepth 1
-	SSLCertificateFile /var/www/certs/ClientGenerator/server.crt
-	SSLCertificateKeyFile /var/www/certs/ClientGenerator/server.key
-	SSLCACertificateFile /var/www/certs/ClientGenerator/ca.crt
-</VirtualHost>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/DES_RSA_X509V3_SHA256">Link</a></td>
+			<td><p>DES</p></td>
+			<td><p>RSA</p></td>
+			<td><p>X509-v3</p></td>
+		    <td><a href="./certs/ClientGenerator/des_rsa_x509v3_sha256_client.p12">PKCS</a></td>
+		    <td><p>SHA256</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/DES_RSA_X509V3_MD5">Link</a></td>
+			<td><p>DES</p></td>
+			<td><p>RSA</p></td>
+			<td><p>X509-v3</p></td>
+			<td><a href="./certs/ClientGenerator/des_rsa_x509v3_md5_client.p12">PKCS</a></td>
+			<td><p>MD5</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/DES_DSA_X509V3_SHA256">Link</a></td>
+			<td><p>DES</p></td>
+			<td><p>DSA</p></td>
+			<td><p>X509-v3</p></td>
+			<td><a href="./certs/ClientGenerator/des_dsa_x509v3_sha256_client.p12">PKCS</a></td>
+			<td><p>SHA256</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/DES_DSA_X509V3_MD5">Link</a></td>
+			<td><p>DES</p></td>
+			<td><p>DSA</p></td>
+			<td><p>X509-v3</p></td>
+			<td><a href="./certs/ClientGenerator/des_dsa_x509v1_md5_client.p12">PKCS</a></td>
+			<td><p>MD5</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/AES_RSA_X509V3_SHA256">Link</a></td>
+			<td><p>AES</p></td>
+			<td><p>RSA</p></td>
+			<td><p>X509-v3</p></td>
+			<td><a href="./certs/ClientGenerator/aes_rsa_x509v3_sha256_client.p12">PKCS</a></td>
+			<td><p>SHA256</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/AES_RSA_X509V3_MD5">Link</a></td>
+			<td><p>AES</p></td>
+			<td><p>RSA</p></td>
+			<td><p>X509-v3</p></td>
+			<td><a href="./certs/ClientGenerator/aes_rsa_x509v3_md5_client.p12">PKCS</a></td>
+			<td><p>MD5</p></td></tr>
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/AES_DSA_X509V3_SHA256">Link</a></td>
+			<td><p>AES</p></td>
+			<td><p>DSA</p></td>
+			<td><p>X509-v3</p></td>
+			<td><a href="./certs/ClientGenerator/aes_dsa_x509v3_sha256_client.p12">PKCS</a></td>
+	        <td><p>SHA256</p></td></tr>	
+		<tr><td><a href="https://zhubuntu14.spidynamics.com/AES_DSA_X509V3_MD5">Link</a></td>
+			<td><p>AES</p></td>
+			<td><p>DSA</p></td>
+			<td><p>X509-v3</p></td>
+			<td><a href="./certs/ClientGenerator/aes_dsa_x509v3_md5_client.p12">PKCS</a></td>
+			<td><p>MD5</p></td></tr>	
+	</table>
+</body>
+</html>
